@@ -8,20 +8,53 @@ body {
 }
 .container {
     /* 1. The Border & Basics */
-    border: 2px solid white;
     background-color: #ffffff;
-    display: flex; /* Side-by-side layout */
+    display: flex; 
+    
     
     /* 2. Responsive Width */
-    width: 100%;           /* Shrinks as the window narrows */
-    max-width: 900px;     /* The "Fixed" width at its largest point */
+    width: 95%;            /* Use a percentage so it has room to shrink */
+    max-width: 900px;     
     
     /* 3. The Scaling Magic */
     aspect-ratio: 1.5 / 1; /* Width is 1.5x the Height */
+    height: auto;          /* Allow aspect-ratio to determine height */
+    max-height: 95vh;      /* Optional: Keeps it from getting taller than the screen */
     
    /* 4. Safety for Content */
-    overflow: hidden;      /* Keeps the box shape strictly enforced */
-    margin: auto;          /* Keeps it centered */
+    overflow: hidden;
+    margin: auto;          
+}
+.content {
+    border: 2px solid ;
+    width: 100%;
+    height: auto;
+}
+.image {
+    display: flex;
+    background-size: cover; /* Scales the image to cover the entire container */
+    height: 100vh;
+    overflow: hidden;
+    width: 40%;
+  
+}
+image { 
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.name, .email-phone, .password{
+    display: flex;
+    margin-left: 10px;
+    gap: 10px;
     
+}
+#fname, #lname, #email, #phone, #password-input, #confirm-password{
+    display: block;
+    margin-top: 10px;
     
+}
+.input {
+    border-bottom: 2px solid aqua;
+    padding-bottom: 40px;
 }
